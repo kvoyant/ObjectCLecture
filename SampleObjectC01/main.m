@@ -10,8 +10,18 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        //헤더 파일 확인 단축키 : cmd + shift + o
+        //NSString => length 찾기
+        
+        NSString *str = @"Hello iOS";
+        NSInteger len = [str length];
+        NSLog(@"length : %ld", len);
+        
+        NSLog(@"Upper case string : %@", [@"abc" uppercaseString ]);
+        NSLog(@"capitalizedString : %@", [@"abc" capitalizedString]);
+        
+        
     }
     return 0;
 }
