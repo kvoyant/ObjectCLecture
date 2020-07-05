@@ -90,9 +90,37 @@ int main(int argc, const char * argv[]) {
          
          다양한 init 계열의 메소드(NSString 클래스)
             (id)init;
-            (id)initWithString:(NSString
+            (id)initWithString:(NSString *)aString;//객체 파라미터 *
+            ..
+         
+         객체를 생성하는 메소드
+            alloc/init
+         
+         다양한 init 계열의 메소드 (NSString 클래스 )
+            (id)init;
+            (id)initWithString:(NSString *)aString;
+            (id)initWithFormat:(NSString *)format, ....;
+            (id)initWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
+         
+         다양한 init 메소드를 이용해서 객체 생성
+            NSString *str1 = [[NSString alloc] initWithString:@"Hello Objective C"];
+            NSString *str2 = [[NSString alloc] initWithFormat:@"Hello %@", @"Object C"];
+         
+            NSLog(@"str1 : %@", str1);
+            NSLog(@"str2 : %@", str2);
      
-            
+        팩토리 메소드 (factory method): 객체를 생성하는 목적의 코드 작성 패턴
+         팩토리 메소드 이름 : 클래스의 이름으로 시작
+         NSString 클래스의 팩토리 메소드
+            +(instancetype)string;
+            +(instancetype)stringWithString:(NSString *)string;
+            +(instancetype)stringWithFormat:(NSString *)format, ...NS_FORMAT_FUNCTION(1,2);
+         
+         팩토리 메소드 코드 예제
+            NSString *str = [NSString stringWithFormat:@"Hello %@", @"Obejct C"];
+         
+         nil : 아무런 객체를 가리키지 않는 상태
+         포인터 변수만 선언한 경우
          */
         
         
