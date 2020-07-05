@@ -121,9 +121,39 @@ int main(int argc, const char * argv[]) {
          
          nil : 아무런 객체를 가리키지 않는 상태
          포인터 변수만 선언한 경우
+         nil 상태를 이용한 객체 생성(Lazy Initailization)
+            NSString *str;
+            //....
+            if(nil == str) {
+                str = [NSString stringWithFormat:@"Hello %@", @"Object C"];
+            }
+         
+         nil 에 메소드 호출 -> 무시
+         반환값은 0 또는 nil
          */
+        NSString *str3 = nil;
+        NSLog(@"Upper Case String : %@", [str3 uppercaseString]);// (null) nil인 상태
+        NSLog(@"Length : %lu", (unsigned long)[str3 length]);//0
         
+        NSString *a = [[NSString alloc] initWithString:@"Hello Object C"];
+        NSString *b = [[NSString alloc] initWithFormat:@"Hello b %@", @"Object C"];
+        NSLog(@"a : %@", a);
+        NSLog(@"b : %@", b);
         
+        NSString *str4 = [NSString stringWithFormat:@"Factory %@", @"Method"];
+        NSLog(@"str4 : %@", str3);
+        
+        NSString *c;
+        NSLog(@"c : %@", c);
+        if(!c) {
+            c = [NSString stringWithFormat:@"Hello not nil %@", @"Object C"];
+        }
+        NSLog(@"c : %@", c);
+        
+        NSString *str5;
+        NSLog(@"Nil : %@", [str5 uppercaseString]);
+        NSLog(@"Nil : %ld",[str5 length]);
+            
         
     }
     return 0;
