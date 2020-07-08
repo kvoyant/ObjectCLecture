@@ -179,7 +179,24 @@ int main(int argc, const char * argv[]) {
             개발자 사이트에서 string format specifier 검색
          */
             
+        /*
+         객체 생성 메소드 표기
+            [["클래스 이름" alloc] init] => 예: [[NSObject alloc] init]
+         객체 생성 -> 메모리 공간에 할당
+         주소 : 읽고 쓰기 어렵다. ex)0x100114580
+         사용하기 쉽도록 포인터 변수 이용
+            NSObject *obj = [[NSObject alloc] init];
+         하나의 객체에 다수의 포인터 사용
+            NSObject *obj2 = obj;
+         
+         클래스는 대문자 , 포인터는 소문자로 시작
+         */
         
+        NSObject *obj = [[NSObject alloc] init];
+        NSLog(@"Object : %@", obj);
+        NSObject *obj2 = obj;
+        NSLog(@"Obj2 : %@", obj2);
+        //하나의 객체에 다수의 포이터 객체는 같다
     }
     return 0;
 }
