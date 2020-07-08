@@ -153,6 +153,31 @@ int main(int argc, const char * argv[]) {
         NSString *str5;
         NSLog(@"Nil : %@", [str5 uppercaseString]);
         NSLog(@"Nil : %ld",[str5 length]);
+        
+        
+        /*
+         <포맷문자열>
+         
+         디버그 영역의 콘솔에 정보 출력하기
+         NSLog(@"문자열 포맷", 인자)
+         문자열 : @"문자열"
+         포맷 문자열과 인자 대치
+         
+         정수형
+            - %d, %u (unsigned)
+            - %ld, %lu (long 타입)
+         실수형
+            - %f, %e(지수형)
+         16진수, 8진수
+            - %x, %o
+         객체형
+            - %@
+         
+         다수의 데이터 사용
+            NSLog(@"%d + %d = %d", 1, 2, (1+2));
+         포맷 문자열
+            개발자 사이트에서 string format specifier 검색
+         */
             
         
     }
