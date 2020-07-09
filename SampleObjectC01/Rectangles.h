@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(int)size;
 
+-(void)setWidth:(int)newWidth height:(int)newHeight;
+-(BOOL)isSqure;
+
 @end
 
 NS_ASSUME_NONNULL_END

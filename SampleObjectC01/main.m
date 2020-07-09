@@ -208,6 +208,27 @@ int main(int argc, const char * argv[]) {
         int size = [rect size];
         
         NSLog(@"Rectangle(20*30) size : %d", size);
+        
+        /*
+         가로와 세로 길이를 동시에 설정(self) 사용
+         정사각형을 판단하는 행위 추가
+         isSquare
+         */
+        [rect setWidth:30 height:40];
+        size = [rect size];
+        NSLog(@"Rectangle(30*40) size : %d", size);
+        
+        Rectangles *r1 = [[Rectangles alloc] init];
+        [r1 setWidth:10];
+        [r1 setHeight:20];
+        
+        NSLog(@"r1 isSqure : %d", [r1 isSqure]);
+
+        Rectangles *r2 = [[Rectangles alloc] init];
+        [r2 setWidth:20];
+        [r2 setHeight:20];
+        
+        NSLog(@"r2 isSqure : %@", [r2 isSqure] ? @"YES" : @"NO");
     }
     return 0;
 }

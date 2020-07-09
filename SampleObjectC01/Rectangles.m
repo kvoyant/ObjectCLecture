@@ -136,5 +136,18 @@
 -(int)size {
     return width * height;
 }
+- (void)setWidth:(int)newWidth height:(int)newHeight {
+    [self setWidth:newWidth];
+    [self setHeight:newHeight];
+}
 
+-(BOOL)isSqure {
+    
+//    if(width == height)
+//        return YES;
+//    else
+//        return NO;
+    
+    return width == height;
+}
 @end
