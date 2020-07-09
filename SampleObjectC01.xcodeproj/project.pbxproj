@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186CCEF924B768500036F00E /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CCEF824B768500036F00E /* Square.m */; };
 		282AC63C24B6966900A74207 /* Rectangles.m in Sources */ = {isa = PBXBuildFile; fileRef = 282AC63B24B6966900A74207 /* Rectangles.m */; };
 		284E995E24B16A6B00FCD84D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E995D24B16A6B00FCD84D /* main.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		186CCEF724B768500036F00E /* Square.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		186CCEF824B768500036F00E /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
 		282AC63A24B6966900A74207 /* Rectangles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangles.h; sourceTree = "<group>"; };
 		282AC63B24B6966900A74207 /* Rectangles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rectangles.m; sourceTree = "<group>"; };
 		284E995A24B16A6B00FCD84D /* SampleObjectC01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SampleObjectC01; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,8 @@
 				284E995D24B16A6B00FCD84D /* main.m */,
 				282AC63A24B6966900A74207 /* Rectangles.h */,
 				282AC63B24B6966900A74207 /* Rectangles.m */,
+				186CCEF724B768500036F00E /* Square.h */,
+				186CCEF824B768500036F00E /* Square.m */,
 			);
 			path = SampleObjectC01;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186CCEF924B768500036F00E /* Square.m in Sources */,
 				284E995E24B16A6B00FCD84D /* main.m in Sources */,
 				282AC63C24B6966900A74207 /* Rectangles.m in Sources */,
 			);
