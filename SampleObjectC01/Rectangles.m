@@ -121,5 +121,20 @@
         setter 메소드 : 데이터 값을 설정하기 위한 의도
         getter 메소드 : 데이터 값을 얻어오기 위한 의도
      */
+-(void)setWidth:(int)newWidth {
+    width = newWidth;
+}
+-(int)width {
+    return width;
+}
+-(void)setHeight:(int)newHeight {
+    height = newHeight;
+}
+-(int)height {
+    return height;
+}
+-(int)size {
+    return width * height;
+}
 
 @end

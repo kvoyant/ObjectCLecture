@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Rectangles.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -197,6 +198,16 @@ int main(int argc, const char * argv[]) {
         NSObject *obj2 = obj;
         NSLog(@"Obj2 : %@", obj2);
         //하나의 객체에 다수의 포이터 객체는 같다
+        
+        Rectangles *rect = [[Rectangles alloc] init];
+        [rect setWidth:20];
+        [rect setHeight:30];
+        
+        NSLog(@"width : %d, height : %d", [rect width], [rect height]);
+        
+        int size = [rect size];
+        
+        NSLog(@"Rectangle(20*30) size : %d", size);
     }
     return 0;
 }
