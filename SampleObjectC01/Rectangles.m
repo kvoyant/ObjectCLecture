@@ -48,7 +48,78 @@
              }
              @end
      
+     메소드 선언과 구현
+         사각형 클래스에 넓이 구하는 행위 작성 -> size 메소드
+         메소드 선언
+             @interface Rectangle: NSObject {
+                int height, width;
+             }
+             -(int)size;
+             @end
+         
+         메소드 구현
+             @implementation Rectangle
+             -(int)size {
+                return width * height;
+             }
+             @end
      
+     인스턴스 메소드와 클래스 메소드
+                          인스턴스 메소드          클래스 메소드
+             구별하기     : -기호로 시작             +기호로 시작
+             메시지 리시버.:      객체                 클래스
+             멤버변수접근  :      가능                 불가능
+             선언예제     : -(void)method1;     +(void)method2;
+             사용예제     : [obj method1]       [Class method2]
+     
+     인스턴스 메소드 선언
+         @instance MyClass:NSObject
+         -(void)instanceMethod;
+         @end
+     인스턴스 메소드 사용 => 객체 생성 필요
+         Rectangle * rec = [[Rectangle alloc] init];
+         int area = [rect size];
+     멤버변수에 접근 가능
+         -(int)size {
+            return width * heigth
+         }
+     
+     클래스 메소드 선언
+         @interface MyClass:NSObject
+         +(void)classMethod;
+         @end
+     클래스 메소드 사용 => 객체 생성 불필요
+        [MyClass classMethod]
+     클래스 메소드는 멤버 변수에 접근 불가. ERROR
+         +(int)size {
+            return width * height; => ERROR !
+         }
+     
+     메소드 구현
+         -(int)method2 {
+            int ret;
+             //
+             return ret;
+         }
+         -(void)method3 {
+             //code
+             return;
+         }
+     메소드 선언(파라미터 있음)
+         -(void)setWidth:(int)newWidth;
+         -(void)setWidth:(int)newWidth height:(int)newHeight;
+     메소드 구현(파라미터 있음)
+         -(void)setWidth:(int)newWidth height:(int)newHeight {
+         width = newWidth;
+         height = newHeight;
+     메소드 사용
+     [rect setWidth:100];
+     [rect setWidth:100 height:1000;
+     
+     클래스의 데이터 : 보호(캡슐화)
+        클래스 외부에서 데이터 값을 얻거나/설정하기 위한 방법 사용
+        setter 메소드 : 데이터 값을 설정하기 위한 의도
+        getter 메소드 : 데이터 값을 얻어오기 위한 의도
      */
 
 @end
