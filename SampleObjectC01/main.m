@@ -229,6 +229,47 @@ int main(int argc, const char * argv[]) {
         [r2 setHeight:20];
         
         NSLog(@"r2 isSqure : %@", [r2 isSqure] ? @"YES" : @"NO");
+        
+        /*
+         상속과 is-a 관계
+            
+            자식클래스의 객체는 부모 클래스의 객체로 취급
+    
+            뷰관계에서 is-a관계
+                UIView *view1 = [[UILable alloc]init];
+                UIView *view2 = [[UIImageView alloc]init];
+            
+            사각형과 정사각형에서 is-a 관계
+                square는 Rectangle 이다
+                Rectangle *obj = [[Square alloc]init];
+         
+            정사각형의 가로 세로 길이 재정의 (Square 클래스 구현부 예제) - 오버라이딩
+                @implementation Square
+                -(void)setWidth:(int)newWidth {
+                    width = newWidth
+                    height = newWidth
+                }
+                @end
+         
+             오버로딩 : 같은 메소드를 파라미터로 구분
+             오브젝트 씨 : 오버로딩 지원안함
+                 -(void)foo:(int)i;
+                 -(void)foo:(NSString *)str;
+             레이블을 다르게 작성해야 한다.
+                 -(void)foo:(int)a with:(float)b;
+                 -(void)foo:(int0a second:(float)b;
+         
+             self : 클래스 내부에서 동작 중인 객체 참조
+         
+             super : 부모 클래스 부분 참조
+         
+             Square에서 부모 클래스 Rectangle 기능 사용
+                 -(void)setWidth:(int)newWidth {
+                    [super setWidth:newWidth];
+                    [super setHeight:newWidth];
+                 }
+         
+         */
     }
     return 0;
 }
