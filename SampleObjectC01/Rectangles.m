@@ -11,6 +11,8 @@
 @implementation Rectangles
 
 -(id)init {
+    return [self initWithWidth:10 height:20];
+    /*
     self = [super init];
     if(self) {
         //초기화 코드
@@ -18,8 +20,17 @@
         [self setHeight:20];
     }
     return self;
+     */
 }
 
+-(id)initWithWidth:(int)newWidth height:(int)newHeight {
+    self = [super init];
+    if(self) {
+        [self setWidth:newWidth];
+        [self setHeight:newHeight];
+    }
+    return self;
+}
 
     /*
      file > new > file > mac OS > Cocoa Class

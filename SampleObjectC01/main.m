@@ -362,6 +362,9 @@ int main(int argc, const char * argv[]) {
         Rectangles *r3 = [[Rectangles alloc] init];
         NSLog(@"Rectangle size : %d", [r3 size]);
         
+        Rectangles *r4 = [[Rectangles alloc] initWithWidth:20 height:30];
+        NSLog(@"Rectangle size : %d", [r4 size]);
+        
     }
     return 0;
 }
