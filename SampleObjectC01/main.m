@@ -283,6 +283,85 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Square size : %d", [s2 size]);
         
+        /*
+         동적 타입과 바인딩
+         
+             정적타입 : 코드 작성시 타입을 명시
+                BOOL boolVar;
+                int intVar;
+                NSString *strVar;
+             
+             동적 타입 : 코드 작성시 타입을 명시하지 않음
+
+             id 사용, 포인터 형이고 *를 사용하지 않음
+                id dynamicTypeVar;
+                -(void)dynamicTypeMethod:(id)arg;
+         
+         바인딩 : 참조와 구현이 연결
+            포인터 변수가 객체와 연결
+            메소드 호출 코드와 메소드 구현부 연결
+         
+         정적 바인딩(static binding) : 컴파일 시간에 결정
+         
+         동적 바인딩(dynamic binding): 런타임(runtime)
+         
+         오브젝티브 씨 : 동적 바인딩 언어
+         
+         포인터가 가리키는 객체의 클래스 알아내기
+            -(Class)superclass;
+            -(Class)class;
+         
+         클래스에서 생성된 객체 알아내기
+             -(BOOL)isMemberOfClass:(Class)aClass;
+             -(BOOL)isKindOfClass:(Class)aClass;
+         
+         Rectangle 클래스 객체인지 알아내기
+             if([rect isMemberOfClass:[Rectangle class]]) {
+                NSLog(@"Rectangle 클래스");
+             }
+             else {
+                NSLog(@"Rectangle 클래스 아님");
+             }
+         
+         초기화 메소드
+         
+            init 메소드 재정의 : 객체 생성 과정에서 동작해야 하는 코드
+         
+         init 메소드의 재정의
+             부모 클래스를 이용한 초기화
+             부모 클래스의 초기화 과정 성공시 초기화 코드 동작
+             생성된 객체 반환(self)
+         
+         사각형 객체 생성시 가로와 세로 길이 자동 설정
+             -(id)init {
+                self = [super init];
+                if(self) {
+                    //초기화 코드 작성
+                    width = 10;
+                    height = 10;
+                }
+                return self;
+             }
+         
+         초기화 과정에 추가 정보 필요하면
+             initWith 메소드 생성 ( 헤더에 선언 )
+                 -(id)initWithWidth:(int)newWidth height:(int)newHeight {
+                    self = [super init];
+                    if(self) {
+                        width = newWidth;
+                        height = newHeight;
+                    }
+                    return self;
+                 }
+         
+         객체 생성 예제
+            Rectangle *rect = [[Rectangle alloc] initWithWidth:50 height:50];
+         
+         */
+        
+        Rectangles *r3 = [[Rectangles alloc] init];
+        NSLog(@"Rectangle size : %d", [r3 size]);
+        
     }
     return 0;
 }
