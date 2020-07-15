@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Rectangles.h"
+#import "Square.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -270,6 +271,18 @@ int main(int argc, const char * argv[]) {
                  }
          
          */
+        
+        Square *s1 = [[Square alloc]init];
+        [s1 setWidth:10];
+        [s1 setHeight:10];
+        
+        NSLog(@"Square size : %d", [s1 size]);
+        
+        Square *s2 = [[Square alloc]init];
+        [s2 setWidth:20];
+        
+        NSLog(@"Square size : %d", [s2 size]);
+        
     }
     return 0;
 }

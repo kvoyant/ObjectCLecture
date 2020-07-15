@@ -10,4 +10,8 @@
 
 @implementation Square
 
+-(void)setWidth:(int)newWidth {
+    [super setWidth:newWidth];
+    [super setHeight:newWidth];
+}
 @end
