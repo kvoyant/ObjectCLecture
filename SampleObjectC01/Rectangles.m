@@ -11,7 +11,7 @@
 @implementation Rectangles
 
 -(id)init {
-    return [self initWithWidth:10 height:20];
+    return [self initWithWidth:10 height:20];//아래를 한줄로 표기
     /*
     self = [super init];
     if(self) {
