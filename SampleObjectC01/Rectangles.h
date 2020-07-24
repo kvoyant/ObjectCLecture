@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)initWithWidth:(int)newWidth height:(int)newHeight;
 
++(id)rectangle;
+
 @end
 
 NS_ASSUME_NONNULL_END

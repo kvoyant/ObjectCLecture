@@ -10,6 +10,11 @@
 
 @implementation Rectangles
 
++(id)rectangle {
+    Rectangles *newObj = [[Rectangles alloc] init];
+    return newObj;
+}
+
 -(id)init {
     return [self initWithWidth:10 height:20];//아래를 한줄로 표기
     /*

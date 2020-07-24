@@ -368,6 +368,35 @@ int main(int argc, const char * argv[]) {
         Square *ss1 = [[Square alloc] initWithWidth:50];
         NSLog(@"Square size : %d", [ss1 size]);
         
+        /*
+         팩토리 메소드 : 객체 생성 디자인 패턴
+         
+         객체를 생성하고 반환하는 코드
+         
+         클래스 메소드
+         
+         메소드의 이름은 클래스의 이름으로 시작
+         
+             사각형 객체를 생성하는 팩토리 메소드
+                 +(id)rectangle {
+                    Rectangle *obj = [[Rectangle alloc] init];
+                    return obj;
+                 }
+         
+                 +(id)rectangle:(int)width height:(int)height {
+                    Rectangle *newObj = [[Rectangle alloc] initWithWidth:width height:height]];
+                    return newObj;
+                 }
+         
+         팩토리 메소드로 객체 생성
+             Rectangle *obj1 = [Rectangle rectangle];
+             Rectangle *obj2 = [Rectangle rectangle:10 height:20];
+         */
+        
+        Rectangles *rr2 = [Rectangles rectangle];
+        NSLog(@"Rectangle size : %d", [rr2 size]);
+        
+        
     }
     return 0;
 }
