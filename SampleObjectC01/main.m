@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Rectangles.h"
-#import "Square.h"
+#import "Rectangles.h"//import!
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -190,6 +189,11 @@ int main(int argc, const char * argv[]) {
          
          */
 
+        Rectangles *obj = [[Rectangles alloc] init];
+        obj.width = 10;
+        obj.height = 20;
+        
+        NSLog(@"Width : %d, Height : %d", obj.width, obj.height);
         
     }
     return 0;

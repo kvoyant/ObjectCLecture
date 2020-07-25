@@ -10,17 +10,6 @@
 
 @implementation Square
 
--(id)initWithWidth:(int)newWidth {
-    return [super initWithWidth:newWidth height:newWidth];
-    
-//    self = [super init];
-//    if( self ) {
-//        [super setWidth:newWidth];
-//        [super setHeight:newWidth];
-//    }
-//    return self;
-}
-
 -(void)setWidth:(int)newWidth {
     [super setWidth:newWidth];
     [super setHeight:newWidth];
