@@ -43,6 +43,19 @@ int main(int argc, const char * argv[]) {
         else
             NSLog(@"abcd 셀렉터 호출 불가!");
         
+        /*
+         < 프러퍼티 >
+         
+         프로퍼티 : 점(.)을 이용해서 데이터에 접근
+         클래스 선언부에 프로퍼티 선언
+            @property([프로퍼티 속성])[타입][이름];
+         
+         
+         
+         
+         */
+
+        
     }
     return 0;
 }

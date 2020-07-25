@@ -10,25 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Rectangles : NSObject {
-    int width;
-    int height;
-}
-
--(void)setWidth:(int)newWidth;
--(int)width;
-
--(void)setHeight:(int)newHeight;
--(int)height;
-
--(int)size;
-
--(void)setWidth:(int)newWidth height:(int)newHeight;
--(BOOL)isSqure;
-
--(id)initWithWidth:(int)newWidth height:(int)newHeight;
-
-+(id)rectangle;
+@interface Rectangles : NSObject
 
 @end
 
