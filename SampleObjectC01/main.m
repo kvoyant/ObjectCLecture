@@ -194,6 +194,7 @@ int main(int argc, const char * argv[]) {
         obj.height = 20;
         
         NSLog(@"Width : %d, Height : %d", obj.width, obj.height);
+        NSLog(@"Size : %d", [obj size]);
         
     }
     return 0;

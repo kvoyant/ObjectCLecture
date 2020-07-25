@@ -10,4 +10,9 @@
 
 @implementation Rectangles
 
+-(int)size {
+//    return self.width * self.height;
+    return _width * _height;
+}
+
 @end
