@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Rectangles : NSObject
 
 //프로퍼티 세팅만으로 값을 get set 할 수 있다.
-@property int width;
+@property (nonatomic) int width;
 @property int height, height2;
 
 //-(int)size;

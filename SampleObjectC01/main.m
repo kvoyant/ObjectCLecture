@@ -190,11 +190,11 @@ int main(int argc, const char * argv[]) {
          */
 
         Rectangles *obj = [[Rectangles alloc] init];
-        obj.width = 10;
+        obj.width = -10;
         obj.height = 20;
         
         NSLog(@"Width : %d, Height : %d", obj.width, obj.height);
-        NSLog(@"Size : %d", [obj size]);
+//        NSLog(@"Size : %d", [obj size]);
         NSLog(@"Size : %d", obj.size);
         //obj.size = 300;//compile error occur !! readonly property not writable !
         
