@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Rectangles : NSObject
 
+@property int width;
+@property int height;
+
 @end
 
 NS_ASSUME_NONNULL_END
