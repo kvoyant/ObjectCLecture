@@ -25,4 +25,9 @@
     [super setWidth:newWidth];
     [super setHeight:newWidth];
 }
+
++(id)SquareWithWidth:(int)newWidth {
+    Square *newObj = [[Square alloc] initWithWidth:newWidth];
+    return newObj;
+}
 @end

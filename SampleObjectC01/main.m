@@ -396,6 +396,9 @@ int main(int argc, const char * argv[]) {
         Rectangles *rr2 = [Rectangles rectangle];
         NSLog(@"Rectangle size : %d", [rr2 size]);
         
+        Square *ss2 = [Square SquareWithWidth:70];
+        NSLog(@"Square ss2 size : %d", [ss2 size]);
+        
         
     }
     return 0;

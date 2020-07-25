@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)initWithWidth:(int)newWidth;
 
++(id)SquareWithWidth:(int)newWidth;
+
 @end
 
 NS_ASSUME_NONNULL_END
