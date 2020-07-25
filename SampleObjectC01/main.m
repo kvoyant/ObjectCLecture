@@ -195,6 +195,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Width : %d, Height : %d", obj.width, obj.height);
         NSLog(@"Size : %d", [obj size]);
+        NSLog(@"Size : %d", obj.size);
+        //obj.size = 300;//compile error occur !! readonly property not writable !
         
     }
     return 0;

@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property int width;
 @property int height, height2;
 
--(int)size;
+//-(int)size;
+
+@property (readonly)int size;
 
 @end
 
