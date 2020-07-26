@@ -260,6 +260,22 @@ int main(int argc, const char * argv[]) {
              }
          
          */
+        /*
+         description
+         
+             객체의 상황을 설명하는 메소드
+         
+             NSLog의 %@에서 자동 동작
+         
+             기본 구현 : 클래스 이름과 주소
+         
+             Rectangle 클래스에 재작성
+         
+                 -(NSString *)description {
+                    return [NSString stringWithFormat:@"Rectangle 클래스(%p), 가로:%d 세로:%d", self, _width, -height];
+                 }
+                //%p : 객체의 주소
+         */
 
         
         
