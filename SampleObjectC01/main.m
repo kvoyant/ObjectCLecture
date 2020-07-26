@@ -198,6 +198,40 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Size : %d", obj.size);
         //obj.size = 300;//compile error occur !! readonly property not writable !
         
+        /*
+         객체 비교 : 같은 객체인가? 주소가 같은가?
+         */
+        
+             NSString *str1 = @"Hello World";
+             NSString *str2 = [NSString stringWithFormat:@"Hello %@", @"World"];
+             
+            //다른 객체 이다 !
+             if(str1 == str2)
+                NSLog(@"같은 문자열 객체");
+             else
+                NSLog(@"다른 문자열 객체");//결과
+
+            //같은 객체 이다  !
+//             같은 객체를 참조하는 포인터와 비교
+            NSString *str3 = str2;
+            if(str2 == str3)
+               NSLog(@"같은 문자열 객체");//결과
+            else
+               NSLog(@"다른 문자열 객체");
+
+        /*
+         객체 내용 비교 : isEqual:
+            -(BOOL)isEqual:(id)object;
+         */
+//        문자열 내용 비교
+            if([str1 isEqual:str2])
+                NSLog(@"같은 문자열");//결과
+            else
+                NSLog(@"다른 문자열");
+        
+
+        
+        
     }
     return 0;
 }
