@@ -228,7 +228,38 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"같은 문자열");//결과
             else
                 NSLog(@"다른 문자열");
-        
+        /*
+         클래스를 생성하고, 객체 비교해야 하면 isEqual: 메소드 작성
+         사각형 객체간 비교 - 어떻게 비교할 것인가?
+         
+          -(BOOL)isEqual:(id)object {
+             if([object isKindOfClass:[Rectangles class]]) {
+                 Rectangles *other = (Rectangles *)object;
+                 return _width == other.width && _height == other.height;
+             }
+             return NO;
+         }
+         
+         isEqual: 의 id 타입 파라미터
+            -(BOOL)isEqual:(id)object;
+         
+         타입 한정 메소드 작성
+             NSString 의 경우
+                -(BOOL)isEqualToString:(NSString *)aString;
+         
+         사각형 클래스의 isEqualToRectangle: 메소드
+         
+             -(BOOL)isEqual:(id)object {
+                if([object isKindOfClass:[Rectangle class]]) {
+                    return [self is EqualToRectangle:(Rectangle *)object];
+                }
+                return NO;
+             }
+             -(BOOL)isEqualToRectangle:(Rectangle *)other {
+                return _width == other.width && _height == other.height;
+             }
+         
+         */
 
         
         
