@@ -20,6 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly)int size;
 
+-(int)size;
+-(BOOL)isSquare;
+
+-(id)initWithWidth:(int)newWidth height:(int)newHeight;//생성자 메서드
+
+-(BOOL)isEqualToRectangle:(Rectangles *)other;
+
 @end
 
 NS_ASSUME_NONNULL_END

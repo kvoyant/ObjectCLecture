@@ -19,4 +19,13 @@
     Square *newObj = [[Square alloc] initWithWidth:newWidth];
     return newObj;
 }
+
+-(id)initWithWidth:(int)newWidth {
+    self = [super init];
+    if(self) {
+        [super setWidth:newWidth];
+        [super setHeight:newWidth];
+    }
+    return self;
+}
 @end

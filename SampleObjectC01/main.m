@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Rectangles.h"//import!
+#import "Square.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -277,8 +278,39 @@ int main(int argc, const char * argv[]) {
                 //%p : 객체의 주소
          */
 
+        Rectangles *r1 = [[Rectangles alloc] initWithWidth:20 height:20];
+        Rectangles *r2 = [[Rectangles alloc] initWithWidth:10 height:20];
         
+        if([r1 isEqual:r2])
+            NSLog(@"R1과 R2는 같은 사각형");
+        else
+            NSLog(@"R1과 R2는 다른 사각형");
         
+        Rectangles *r3 = [[Rectangles alloc] initWithWidth:10 height:20];
+        if([r2 isEqual:r3])
+            NSLog(@"R2과 R3는 같은 사각형");
+        else
+            NSLog(@"R2과 R3는 다른 사각형");
+        
+        Square *s1 = [[Square alloc] initWithWidth:20];
+        if([r1 isEqual:s1])
+            NSLog(@"R1과 S1는 같은 사각형");
+        else
+            NSLog(@"R1과 S1는 다른 사각형");
+        
+        if([r1 isEqualToRectangle:r2])
+            NSLog(@"R1과 R2는 같은 사각형");
+        else
+            NSLog(@"R1과 R2는 다른 사각형");
+        
+//        NSString *str11 = @"ABCD";
+//        if([r1 isEqualToRectangle:str11]) {
+//
+//        }
+//        descript method
+        NSLog(@"R1 : %@", r1);//R1 : Rectangles(0x103804900) 가로 : 20 세로 : 20
+        
+
     }
     return 0;
 }
